@@ -1,0 +1,11 @@
+language: csharp
+sudo: required
+dotnet: 2.1.4
+
+script:
+  - dotnet build src/WinServiceCore
+  - "if [[ $TRAVIS_PULL_REQUEST == 'false' && $TRAVIS_TAG ]]; then 
+  dotnet pack src/WinServiceCore --configuration Release /p:Version=$TRAVIS_TAG;
+  sudo nuget update -self;
+  sudo nuget push src/WinServiceCore/bin/Release/*.nupkg -Source https://www.nuget.org -ApiKey $API_KEY;
+  fi"

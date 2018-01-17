@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <PackageIconUrl>https://en.gravatar.com/userimage/100017782/89bdc96d68ad4b23998e3cdabdeb6e13.png?size=64</PackageIconUrl>
+    <Authors>Syncromatics Engineering</Authors>
+    <Company>Syncromatics</Company>
+    <PackageProjectUrl>https://github.com/syncromatics/WinServiceCore</PackageProjectUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DasMulli.Win32.ServiceUtils" Version="1.1.0" />
+    <PackageReference Include="System.ServiceProcess.ServiceController" Version="4.4.1" />
+  </ItemGroup>
+
+</Project>
